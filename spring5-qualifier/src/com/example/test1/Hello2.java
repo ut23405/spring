@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class Hello2 implements IHello {
 	@Override
 	public String getHello() {
-		return "‚±‚ñ‚É‚¿‚Í!";
+		return "ã“ã‚“ã«ã¡ã¯!";
 	}
 }
