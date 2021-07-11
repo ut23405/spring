@@ -10,7 +10,7 @@ public class MainController {
 
 		Syain syain = context.getBean(Syain.class);
 
-		System.out.println(syain.getHello()); //İ’è‚É‚æ‚è•Ï‚í‚é
+		System.out.println(syain.getHello()); //è¨­å®šã«ã‚ˆã‚Šå¤‰ã‚ã‚‹
 		context.close();
 	}
 }
