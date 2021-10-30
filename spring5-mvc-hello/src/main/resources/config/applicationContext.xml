@@ -15,8 +15,6 @@
 	<context:component-scan
 		base-package="com.example.test1" />
 
-	<context:property-placeholder location="classpath*:config/*.properties"/>
-
 	<mvc:view-resolvers>
 		<mvc:bean-name />
 		<bean class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
