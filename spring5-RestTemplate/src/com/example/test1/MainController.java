@@ -1,15 +1,12 @@
 package com.example.test1;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainController {
 	public static void main(String[] args) {
-
-		AnnotationConfigApplicationContext context = 
-				new AnnotationConfigApplicationContext(TestConfig.class);
-
+		ClassPathXmlApplicationContext context = 
+				new ClassPathXmlApplicationContext("applicationContext.xml");
 		CommService cs = context.getBean(CommService.class);
-
 		cs.getData();
 		context.close();
 	}
