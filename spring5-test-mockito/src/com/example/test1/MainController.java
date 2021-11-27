@@ -1,16 +1,13 @@
 package com.example.test1;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainController {
 	public static void main(String[] args) {
-
-		AnnotationConfigApplicationContext context = 
-				new AnnotationConfigApplicationContext(AppConfig.class);
-
-		Syain syain = context.getBean(Syain.class);
-
-		System.out.println(syain.getHello("a")); //aさん、こんにちは
-		context.close();
+		ClassPathXmlApplicationContext cs = 
+			new ClassPathXmlApplicationContext("applicationContext.xml");
+		Syain syain = cs.getBean(Syain.class);
+		System.out.println(syain.getHello("suzuki"));//suzukiさんこんにちは
+		cs.close();
 	}
 }

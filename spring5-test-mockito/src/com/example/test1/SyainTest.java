@@ -9,12 +9,12 @@ public class SyainTest {
 	public void test1() {
 		Syain s1 = new Syain();
 		String msg = s1.getHello("a");
-		assertThat(msg,is("aさん、こんにちは"));
+		assertThat(msg,is("aさん、こんにちは")); //成功
 	}
 	@Test
 	public void test2() {
 		Syain s1 = new Syain();
 		String msg = s1.getHello(null);
-		assertThat(msg,is("nullです"));
+		assertThat(msg,is("nullです")); //成功
 	}
 }
