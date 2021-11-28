@@ -9,7 +9,7 @@ public class MainController {
 				new ClassPathXmlApplicationContext("applicationContext.xml");
 
 //		ISyain syain = context.getBean("testSyain", ISyain.class);
-		ISyain syain = context.getBean("syain", ISyain.class);
+		ISyain syain = context.getBean(ISyain.class);
 
 		System.out.println(syain.getHello()); //Hello World!
 		context.close();
