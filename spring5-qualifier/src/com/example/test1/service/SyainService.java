@@ -1,15 +1,17 @@
-package com.example.test1;
+package com.example.test1.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
-public class Syain {
-	@Autowired
-	@Qualifier("test2")
-	private IHello obj1;
+import com.example.test1.IColor;
 
-	public String getHello() {
-		return obj1.getHello();
+@Component
+public class SyainService {
+	@Autowired
+	@Qualifier("red")
+	private IColor color;
+	
+	public String getColor() {
+		return color.getColor();
 	}
 }
