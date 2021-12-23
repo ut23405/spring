@@ -2,16 +2,17 @@ package com.example.test1;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class MainController {
+public class StartApplication {
 	public static void main(String[] args) {
 
 		ClassPathXmlApplicationContext context = 
 				new ClassPathXmlApplicationContext("applicationContext.xml");
 
-//		ISyain syain = context.getBean("testSyain", ISyain.class);
-		ISyain syain = context.getBean(ISyain.class);
-
-		System.out.println(syain.getHello()); //Hello World!
+		SyainService syainService 
+//				= (SyainService) context.getBean("testSyain");
+				= context.getBean(SyainService.class);		
+		
+		System.out.println(syainService.getHello()); //Hello World!
 		context.close();
 	}
 }
