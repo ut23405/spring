@@ -2,11 +2,11 @@ package com.example.test1;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class MainController {
+public class StartApplication {
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = 
 				new AnnotationConfigApplicationContext(TestConfig.class);
-		Syain syain = context.getBean(Syain.class);
+		SyainService syain = context.getBean(SyainService.class);
 		System.out.println(syain.getHello()); //Hello World!
 		context.close();
 	}
