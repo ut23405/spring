@@ -16,7 +16,7 @@ public class CommService {
 
 	public void getData() {
 		String r1 = restTemplate.postForObject(URL2, null, String.class);
-		System.out.println(r1); // ①
+		System.out.println(r1); // 1.下記に実行結果あり
 
 		RestDto r2 = restTemplate.postForObject(URL2, null, RestDto.class);
 		System.out.println(r2.getHeaders().getAccept());// application/json, application/*+json
@@ -27,6 +27,6 @@ public class CommService {
 		color.put("a", "red");
 		color.put("b", "blue");
 		String r3 = restTemplate.postForObject(URL2, color, String.class);
-		System.out.println(r3); // ③文字列が出力される
+		System.out.println(r3); // 2.下記に実行結果あり
 	}
 }
