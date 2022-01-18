@@ -9,13 +9,15 @@ public class Syain {
 	@Autowired
 	MessageSource msgSource;
 
+	MessageSourceResolvable hello1 = 
+			new DefaultMessageSourceResolvable("syain.hello1"); //こんにちは
 	MessageSourceResolvable name1 = 
-			new DefaultMessageSourceResolvable("syain.name1");
+			new DefaultMessageSourceResolvable("syain.name1"); //suzuki
 
 	public void getName() {
 		String message = msgSource.getMessage
-				("syain.msg",
-				new MessageSourceResolvable[] { name1 },
+				("syain.msg",  //「{0},名前は{1}です」
+				new MessageSourceResolvable[] { hello1,name1 },
 				Locale.JAPANESE);
 		System.out.println(message);
 	}
