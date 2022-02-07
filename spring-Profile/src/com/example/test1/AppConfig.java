@@ -7,17 +7,17 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 public class AppConfig {	
 	@Bean
-	Syain syain() {
-		return new Syain();
+	SyainService createService() {
+		return new SyainService();
 	}
 	@Bean
 	@Profile("product")
-	Hello1 hello1() {
-		return new Hello1();
+	Msg1 Message1() {
+		return new Msg1();
 	}
 	@Bean
 	@Profile("test")
-	Hello2 hello2() {
-		return new Hello2();
+	Msg2 Message2() {
+		return new Msg2();
 	}
 }
